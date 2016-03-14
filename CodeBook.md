@@ -1,26 +1,21 @@
 Code Book
 This code book includes information about the source data, the transformations performed after collecting the data and some information about the variables of the resulting data sets.
 
-Study Design
 
 The source data was collected from the UCI Machine Learning Repository to complete an assignment for a Coursera course named Getting and Cleaning Data instructed by Jeff Leek. 
 The assignment involved working with the data set and producing tidy data representation of the source data. 
-Below is a list of the operations done to achieve the outputs.
+Below is a step by step description of the actions involved to produce the final output.
 
-Downloaded the data set
-Unzipped the data set into my chosen working directory
-Loaded test and training data sets into data frames
-Loaded source variable names for test and training data sets
-Loaded activity labels
-Combined test and training data frames using rbind
-Paired down the data frames to only include the mean and standard deviation variables
-Replaced activity IDs with the activity labels for readability
-Combined the data frames to produce one data frame containing the subjects, measurements and activities
-Produced "merged_tidy_data.txt" with the combined data frame as the first expected output
-Created another data set using the data.table library to easily group the tidy data by subject and activity
-Then applied the mean and standard deviation calculations across the groups
-Produced "calculated_tidy_data.txt" as the second expected output
-Please refer to run_analysis.R for implementation details.
+Data set was downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzipped into the working directory.
+Test and training data sets were set into data frames.
+Source variable names and activity labels were loaded.
+rbind was used to merge test and training data frames.
+Data frames were pared down to only the mean and standard deviation variables.
+Activity labels were added for readability
+Data frames were merged to create one data frame that includes subjects, measurements and activities and "merged_tidy_data.text" was produced.
+Tidy data was grouped by subject and activity in another newly created data set and mean and standard deviation was applied across the groups.
+Finally  "calculated_tidy_data.txt" was produced.
+
 
 Variables
 
